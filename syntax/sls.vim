@@ -58,10 +58,10 @@ endif
 syn keyword salt_stateInclude include extend containedin=yamlBlockMappingKey
 highlight link salt_stateInclude Include
 
-syn keyword salt_stateSpecialArgs name names check_cmd listen listen_in onchanges onchanges_in onfail onfail_in onlyif prereq prereq_in require require_in unless use use_in watch watch_in containedin=yamlBlockMappingKey
+syn keyword salt_stateSpecialArgs name names check_cmd creates fire_event listen listen_in onchanges onchanges_any onchanges_in onfail onfail_any onfail_all onfail_in onfail_stop onlyif order parallel prereq prereq_in prerequired reload_grains reload_modules reload_pillar require require_any require_in retry runas runas_password saltenv umask unless use use_in watch watch_any watch_in containedin=yamlBlockMappingKey
 highlight link salt_stateSpecialArgs Special
 
-syn keyword salt_stateErrors requires requires_in watches watches_in includes extends containedin=yamlBlockMappingKey
+syn keyword salt_stateErrors requires requires_any requires_in watches watches_any watches_in includes extends reload_pillars containedin=yamlBlockMappingKey
 highlight link salt_stateErrors Error
 
 let g:NERDCustomDelimiters = {
